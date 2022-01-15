@@ -14,9 +14,11 @@
 		3D9434942792E059006A7A45 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9434932792E058006A7A45 /* GameState.swift */; };
 		3D94349727931B39006A7A45 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D94349627931B39006A7A45 /* SettingsView.swift */; };
 		3D94349927932878006A7A45 /* BackgroundColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D94349827932878006A7A45 /* BackgroundColorView.swift */; };
-		3D94349C27932BE8006A7A45 /* ColorsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D94349B27932BE8006A7A45 /* ColorsStorage.swift */; };
+		3D94349C27932BE8006A7A45 /* GradientsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D94349B27932BE8006A7A45 /* GradientsStorage.swift */; };
 		3D94349E27933205006A7A45 /* GradientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D94349D27933205006A7A45 /* GradientData.swift */; };
 		3D9434A127933233006A7A45 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9434A027933233006A7A45 /* DataStore.swift */; };
+		3D9434A427933DB0006A7A45 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9434A327933DB0006A7A45 /* ColorExtension.swift */; };
+		3DB874B6279350BA00A8FF04 /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB874B5279350BA00A8FF04 /* SFSafariViewWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +30,12 @@
 		3D9434932792E058006A7A45 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		3D94349627931B39006A7A45 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3D94349827932878006A7A45 /* BackgroundColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorView.swift; sourceTree = "<group>"; };
-		3D94349B27932BE8006A7A45 /* ColorsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsStorage.swift; sourceTree = "<group>"; };
+		3D94349B27932BE8006A7A45 /* GradientsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientsStorage.swift; sourceTree = "<group>"; };
 		3D94349D27933205006A7A45 /* GradientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientData.swift; sourceTree = "<group>"; };
 		3D9434A027933233006A7A45 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		3D9434A227933CC8006A7A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3D9434A327933DB0006A7A45 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		3DB874B5279350BA00A8FF04 /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 		3D9434842792C664006A7A45 /* LifeCounter */ = {
 			isa = PBXGroup;
 			children = (
+				3D9434A227933CC8006A7A45 /* Info.plist */,
 				3D94349F27933228006A7A45 /* Helpers */,
 				3D94349A27932BDD006A7A45 /* Model */,
 				3D94349527931B2A006A7A45 /* Views */,
@@ -95,8 +101,9 @@
 		3D94349A27932BDD006A7A45 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3D94349B27932BE8006A7A45 /* ColorsStorage.swift */,
+				3D94349B27932BE8006A7A45 /* GradientsStorage.swift */,
 				3D94349D27933205006A7A45 /* GradientData.swift */,
+				3D9434A327933DB0006A7A45 /* ColorExtension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				3D9434A027933233006A7A45 /* DataStore.swift */,
+				3DB874B5279350BA00A8FF04 /* SFSafariViewWrapper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -180,13 +188,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D9434942792E059006A7A45 /* GameState.swift in Sources */,
+				3D9434A427933DB0006A7A45 /* ColorExtension.swift in Sources */,
 				3D94349727931B39006A7A45 /* SettingsView.swift in Sources */,
 				3D9434882792C664006A7A45 /* ContentView.swift in Sources */,
 				3D9434862792C664006A7A45 /* LifeCounterApp.swift in Sources */,
 				3D9434A127933233006A7A45 /* DataStore.swift in Sources */,
 				3D94349E27933205006A7A45 /* GradientData.swift in Sources */,
+				3DB874B6279350BA00A8FF04 /* SFSafariViewWrapper.swift in Sources */,
 				3D94349927932878006A7A45 /* BackgroundColorView.swift in Sources */,
-				3D94349C27932BE8006A7A45 /* ColorsStorage.swift in Sources */,
+				3D94349C27932BE8006A7A45 /* GradientsStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +330,7 @@
 				DEVELOPMENT_TEAM = H45X843SXH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = LifeCounter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -350,7 +360,7 @@
 				DEVELOPMENT_TEAM = H45X843SXH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = LifeCounter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

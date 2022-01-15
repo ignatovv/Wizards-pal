@@ -14,7 +14,7 @@ struct BackgroundColorView: View {
         ScrollView(.vertical, showsIndicators: false) {
             Text("Change background").font(.headline)
             LazyVGrid(columns: [.init(), .init(), .init()]) {
-                ForEach(ColorsStorage.all) { data in
+                ForEach(Gradients.all) { data in
                     Button(action: {
                         state.updateBackground(data)
                         UISelectionFeedbackGenerator().selectionChanged()

@@ -56,6 +56,8 @@ final class GameState: ObservableObject {
     }
     
     func updateInitialHealth(_ value: Int) {
+        guard value != initialHealth else { return }
+        
         initialHealth = value
         DataStore.initialHealth = value
         resetHealth()
@@ -65,5 +67,30 @@ final class GameState: ObservableObject {
     func updateBackground(_ data: GradientData) {
         background = data
         DataStore.background = data
+    }
+    
+    private let dice = [1, 2, 3, 4, 5, 6]
+    @Published var toastTitle = ""
+    @Published var toastSubtitle = ""
+    @Published var showToast = false
+    
+    func throwDie() {
+        guard let yourThrow = dice.randomElement() else { return }
+        guard let opponentThrow = dice.randomElement() else { return }
+        
+        if yourThrow == opponentThrow {
+            throwDie()
+            return
+        } else if yourThrow > opponentThrow {
+            toastTitle = "You win the roll"
+        } else {
+            toastTitle = "You lose the roll"
+        }
+        
+        toastSubtitle = "you: \(yourThrow) - opponent: \(opponentThrow)"
+        showToast = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+            self?.showToast = false
+        }
     }
 }

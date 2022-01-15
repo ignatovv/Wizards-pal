@@ -1,10 +1,10 @@
 import SwiftUI
 
-struct ColorsStorage {
+struct Gradients {
     static let all: [GradientData] = [
         GradientData(name: "by design", colors: ["#009FFF", "#ec2F4B"]),
         GradientData(name: "missing name", colors: ["#5433FF", "#20BDFF", "#A5FECB"]),
-        GradientData(name: "bluePink", colors: [ "#03001e", "#7303c0", "#ec38bc", "#fdeff9"]),
+        GradientData(name: "bluePink", colors: [ "#7303c0", "#ec38bc", "#fdeff9"]),
         GradientData(name: "blue", colors: ["#C6FFDD", "#f7797d"]),
         GradientData(name: "pinkOrange", colors: ["#d8a4e1", "#ffcc81"]),
         GradientData(name: "red", colors: ["#bdc3c7", "#2c3e50"]),

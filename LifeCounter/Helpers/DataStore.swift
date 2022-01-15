@@ -10,7 +10,7 @@ final class DataStore {
                     return gradient
                 }
             }
-            return ColorsStorage.default
+            return Gradients.default
         } set {
             let encoder = JSONEncoder()
             if let encoded = try? encoder.encode(newValue) {
