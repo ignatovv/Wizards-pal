@@ -28,4 +28,13 @@ final class DataStore {
             UserDefaults.standard.setValue(newValue, forKey: initialHealthKey)
         }
     }
+    
+    private static let flipScreenKey = "flipScreenKey"
+    static var flipScreen: Bool {
+        get {
+            UserDefaults.standard.value(forKey: flipScreenKey) as? Bool ?? true
+        } set {
+            UserDefaults.standard.setValue(newValue, forKey: flipScreenKey)
+        }
+    }
 }

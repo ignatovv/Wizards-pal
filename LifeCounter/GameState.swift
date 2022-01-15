@@ -18,7 +18,11 @@ final class GameState: ObservableObject {
     @Published var showSetting = false
     @Published var showBackgroundPicker = false
     
-    @Published var flipScreen = true
+    @Published var flipScreen = DataStore.flipScreen {
+        didSet {
+            DataStore.flipScreen = flipScreen
+        }
+    }
     @Published var background: GradientData = DataStore.background
     
     private var wasReseted = false
