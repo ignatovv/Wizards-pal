@@ -77,6 +77,7 @@ final class GameState: ObservableObject {
     @Published var toastTitle = ""
     @Published var toastSubtitle = ""
     @Published var showToast = false
+    @Published var showFeedbackToast = false
     
     func throwDie() {
         guard let yourThrow = dice.randomElement() else { return }

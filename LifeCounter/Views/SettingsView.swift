@@ -39,6 +39,9 @@ struct SettingsView: View {
         .sheet(isPresented: $showSafari) {
             SFSafariViewWrapper(url: URL(string: "https://www.ignatovv.com")!)
         }
+        .alert(isPresented: $state.showFeedbackToast) {
+            rateAppAlert
+        }
     }
     
     private var startingHealthView: some View {
@@ -65,14 +68,10 @@ struct SettingsView: View {
     
     private var reviewInAppStore: some View {
         Button(action: {
-            if let scene = UIApplication.shared.connectedScenes.first(
-                where: { $0.activationState == .foregroundActive }
-            ) as? UIWindowScene {
-                SKStoreReviewController.requestReview(in: scene)
-            }
+            state.showFeedbackToast = true
         }) {
             HStack {
-                Text("Review in App Store 👻").foregroundColor(.secondaryColor)
+                Text("Leave feedback 👻").foregroundColor(.secondaryColor)
                 Spacer()
                 Image(systemName: "chevron.right")
                     .foregroundColor(.gray)
@@ -90,6 +89,38 @@ struct SettingsView: View {
                 Image(systemName: "chevron.right")
                     .foregroundColor(.gray)
             }
+        }
+    }
+    
+    private var rateAppAlert: Alert {
+        Alert(
+            title: Text("Do you like the app?"),
+            message: nil,
+            primaryButton: .default(Text("Yes 🥰")) {
+                startAppstoreReview()
+            },
+            secondaryButton: .default(Text("No 🥲")) {
+                sendEmail()
+            }
+        )
+    }
+    
+    func startAppstoreReview() {
+        if let scene = UIApplication.shared.connectedScenes.first(
+            where: { $0.activationState == .foregroundActive }
+        ) as? UIWindowScene {
+            SKStoreReviewController.requestReview(in: scene)
+        }
+    }
+    
+    func sendEmail() {
+        let email = "ignatovv@protonmail.ch"
+        let subject = "Feedback on your life counter app"
+        let mailtoString = "mailto:\(email)?subject=\(subject)"
+            .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let mailtoUrl = URL(string: mailtoString!)!
+        if UIApplication.shared.canOpenURL(mailtoUrl) {
+            UIApplication.shared.open(mailtoUrl, options: [:])
         }
     }
 }
