@@ -117,8 +117,7 @@ struct ContentView: View {
                     UISelectionFeedbackGenerator().selectionChanged()
                     state.undo()
                 }, label: {
-                    Image(systemName:"clock.arrow.2.circlepath")
-                        .font(.system(size: 40))
+                    Image.undo
                         .foregroundColor(.primaryColor)
                 })
             } else if state.canReset {
@@ -126,13 +125,11 @@ struct ContentView: View {
                     UINotificationFeedbackGenerator().notificationOccurred(.success)
                     state.resetHealth()
                 }, label: {
-                    Image(systemName:"arrow.triangle.2.circlepath")
-                        .font(.system(size: 40))
+                    Image.reset
                         .foregroundColor(.primaryColor)
                 })
             } else {
-                Image(systemName:"arrow.triangle.2.circlepath")
-                    .font(.system(size: 40))
+                Image.reset
                     .foregroundColor(.primaryColor.opacity(0.4))
             }
             
@@ -140,8 +137,7 @@ struct ContentView: View {
                 UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                 state.throwDie()
             }, label: {
-                Image(systemName: "dice")
-                    .font(.system(size: 40))
+                Image.dice
                     .foregroundColor(.primaryColor)
 
             })
@@ -150,8 +146,7 @@ struct ContentView: View {
                 UISelectionFeedbackGenerator().selectionChanged()
                 state.showSetting = true
             }, label: {
-                Image(systemName: "gearshape.circle")
-                    .font(.system(size: 40))
+                Image.settings
                     .foregroundColor(.primaryColor)
 
             })

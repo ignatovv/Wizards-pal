@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D6356A227B1744A00BFBE78 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6356A127B1744A00BFBE78 /* Images.swift */; };
 		3D9434862792C664006A7A45 /* LifeCounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9434852792C664006A7A45 /* LifeCounterApp.swift */; };
 		3D9434882792C664006A7A45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9434872792C664006A7A45 /* ContentView.swift */; };
 		3D94348A2792C664006A7A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D9434892792C664006A7A45 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D6356A127B1744A00BFBE78 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		3D9434822792C664006A7A45 /* LifeCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9434852792C664006A7A45 /* LifeCounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCounterApp.swift; sourceTree = "<group>"; };
 		3D9434872792C664006A7A45 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				3D94349B27932BE8006A7A45 /* GradientsStorage.swift */,
 				3D94349D27933205006A7A45 /* GradientData.swift */,
 				3D9434A327933DB0006A7A45 /* ColorExtension.swift */,
+				3D6356A127B1744A00BFBE78 /* Images.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				3D9434942792E059006A7A45 /* GameState.swift in Sources */,
 				3D9434A427933DB0006A7A45 /* ColorExtension.swift in Sources */,
 				3D94349727931B39006A7A45 /* SettingsView.swift in Sources */,
+				3D6356A227B1744A00BFBE78 /* Images.swift in Sources */,
 				3D9434882792C664006A7A45 /* ContentView.swift in Sources */,
 				3D9434862792C664006A7A45 /* LifeCounterApp.swift in Sources */,
 				3D9434A127933233006A7A45 /* DataStore.swift in Sources */,
@@ -325,7 +329,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"LifeCounter/Preview Content\"";
 				DEVELOPMENT_TEAM = H45X843SXH;
 				ENABLE_PREVIEWS = YES;
@@ -356,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"LifeCounter/Preview Content\"";
 				DEVELOPMENT_TEAM = H45X843SXH;
 				ENABLE_PREVIEWS = YES;
